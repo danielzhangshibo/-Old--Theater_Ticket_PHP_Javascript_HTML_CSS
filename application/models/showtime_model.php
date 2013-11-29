@@ -35,7 +35,6 @@ class Showtime_model extends CI_Model {
 	}
 	
 	function get_showtime_id($movie, $theater, $date, $time){
-		$theater = 'theater';
 		$query = $this->db->query("
 				select showtime.id as tid, movie.title, theater.name, showtime.date, showtime.time
 				from showtime, movie, theater
